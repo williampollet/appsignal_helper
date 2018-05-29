@@ -4,7 +4,7 @@ class AppsignalApi
   end
 
   def samples(exception: nil, since: nil, limit: nil, action: nil)
-    JSON.parse(client.get("/api/#{ENV['APP_ID']}/samples.json?token=#{ENV['APPSIGNAL_API_TOKEN']}&exception=#{exception}&since=#{since}&limit=#{limit}&action=#{action}").body)
+    JSON.parse(client.get("/api/#{ENV['APP_ID']}/samples.json?token=#{ENV['APPSIGNAL_API_TOKEN']}&exception=#{exception}&since=#{since}&limit=#{limit}&action_id=#{action}").body)
   end
 
   def show(id)
