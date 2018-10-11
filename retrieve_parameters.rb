@@ -1,30 +1,7 @@
-class ApiHelper
-  def initialize(exception: nil, limit: nil, since: nil, action: nil)
-    @exception = exception
-    @limit = limit
-    @since = since
-    @action = action
-  end
+helper = ApiHelper.new(
+  exception: 'Streaker::Box::Error',
+  limit: 100,
+  action: 'Project::TrackWorker-hash-perform',
+)
 
-  def retrieve_parameters
-    samples_ids.each_with_object([]) do |id, object|
-      object << sample(id)["params"]
-    end.flatten
-  end
-
-  private
-
-  attr_reader :exception, :limit, :since, :action
-
-  def samples_ids
-    samples["log_entries"].map{|s| s["id"]}
-  end
-
-  def samples
-    AppsignalApi.new.samples(exception: exception, limit: limit, since: since, action: action)
-  end
-
-  def sample(id)
-    AppsignalApi.new.show(id)
-  end
-end
+p helper.retrieve_parameters
