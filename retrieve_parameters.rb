@@ -1,7 +1,8 @@
 helper = ApiHelper.new(
-  exception: 'Streaker::Box::Error',
-  limit: 100,
-  action: 'Project::TrackWorker-hash-perform',
+  exception: 'NoMethodError',
+  limit: 1000,
+  action: 'ProjectsController-hash-show',
+  since: 1537401600,
 )
 
 p helper.retrieve_parameters
