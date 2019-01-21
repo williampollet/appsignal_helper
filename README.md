@@ -20,10 +20,10 @@ bin/console
 
 ```rb
 helper = ApiHelper.new(
-  exception: 'ActionController::ActionControllerError',
-  limit: 400,
-  action: 'PledgesController-hash-create',
-  since: 1537374524,
+  exception: 'MyController::MyControllerError', # exception code on AppSignal
+  limit: 10, # number of occurence to fetch
+  action: 'MyController-hash-create', # action that raised the error
+  since: 1537374524, # fetch since
 )
 
 p helper.retrieve_parameters.uniq
