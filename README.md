@@ -1,4 +1,4 @@
-# How to retrieve parameters from an appsignal exception ?
+## How to retrieve parameters from an appsignal exception ?
 
 open a terminal with `$ irb`
 
