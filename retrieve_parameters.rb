@@ -1,8 +1,10 @@
+require './loader.rb'
+
 helper = ApiHelper.new(
-  exception: 'NoMethodError',
-  limit: 1000,
-  action: 'ProjectsController-hash-show',
-  since: 1537401600,
+  exception: 'ActionController::ActionControllerError',
+  limit: 400,
+  action: 'PledgesController-hash-create',
+  since: 1537374524,
 )
 
-p helper.retrieve_parameters
+p helper.retrieve_parameters.uniq
