@@ -16,7 +16,7 @@ You can then start a console to play with the API:
 bin/console
 ```
 
-## Retrieve parameters
+## Retrieve parameters from an AppSignal exception
 
 ```rb
 helper = ApiHelper.new(
