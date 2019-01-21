@@ -2,5 +2,5 @@
 
 require './loader'
 
-require "pry"
+require 'pry'
 Pry.start
