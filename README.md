@@ -8,10 +8,10 @@ then
 require './loader.rb'
 
 helper = ApiHelper.new(
-  exception: 'ActionController::ActionControllerError',
-  limit: 10,
-  action: 'MyController-hash-create',
-  since: 1537374524,
+  exception: 'MyController::MyControllerError', # exception code on appsignal
+  limit: 10, # number of occurence to fetch
+  action: 'MyController-hash-create', # action that raised the error
+  since: 1537374524, # fetch since
 )
 
 p helper.retrieve_parameters.uniq
