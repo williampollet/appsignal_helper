@@ -8,7 +8,7 @@ class ApiHelper
 
   def retrieve_parameters
     samples_ids.each_with_object([]) do |id, object|
-      object << sample(id)["params"]
+      object << JSON.parse(sample(id)["params"])
     end.flatten
   end
 
