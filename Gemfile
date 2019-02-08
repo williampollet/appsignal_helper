@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source "https://rubygems.org"
 
-gem 'faraday'
-gem 'rubocop'
-gem 'json'
-gem 'dotenv'
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# Specify your gem's dependencies in appsignal_helper.gemspec
+gemspec
