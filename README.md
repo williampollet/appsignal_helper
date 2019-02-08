@@ -20,6 +20,22 @@ Or install it yourself as:
 
     $ gem install appsignal_helper
 
+## Setup
+
+You will need the following env vars:
+
+```ruby
+  export APPSIGNAL_URL=https://appsignal.com
+  export APPSIGNAL_API_TOKEN=…
+  export APP_ID=…
+```
+
+You can then start a console to play with the API:
+
+```
+    bin/console
+```
+
 ## Usage
 
 ### How to retrieve parameters from an appsignal exception ?
